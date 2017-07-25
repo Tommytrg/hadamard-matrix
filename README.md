@@ -10,7 +10,7 @@
 
 **NOTE:** more badges availables in [shields.io](https://shields.io/) -->
 
-> A sudoku solution validator
+> A Hadamard matrix generator of order n using memoization.
 
 ## Install
 
