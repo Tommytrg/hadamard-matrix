@@ -6,53 +6,52 @@ function hadamard(n) {
   return h(n);
 }
 
-function secondQuarter(positive, result, antOrder, order) {
-  for(var i = 0, a = 0; a < antOrder ; i += 1, a += 1){
-    for(var j = 0, b = antOrder; b < order; j += 1, b += 1) {
-      result[a].push(positive[i][j]);
-    }
-  }
-  return result;
-}
-
-function thirdQuarter(positive, result, antOrder, order) {
-  for(var i = 0, a = antOrder; a < order; i += 1, a += 1){
-    result.push([]);
-    for(var j = 0, b = 0; b < antOrder; j += 1, b += 1) {
-      result[a].push(positive[i][j]);
-    }
-  }
-  return result;
-}
-
-function fourthQuarter(positive, result, antOrder, order) {
-  for(var i = 0, a = antOrder; a < order; i += 1, a += 1){
-    for(var j = 0, b = antOrder; b < order; j += 1, b += 1) {
-      result[a].push(-1*positive[i][j]);
-    }
-  }
-  return result;
-}
-
 function h(order) {
   if(memo[order]) {
     return memo[order];
   } else {
-    var positive = order > 4 ? h(order - 4) : h(2);
+    var q1 = order > 4 ? h(order - 4) : h(2);
     var antOrder = order > 4 ? order - 4 : 2;
 
-    var result = positive
-    result = secondQuarter(positive, result, antOrder, order);
-    result = thirdQuarter(positive, result, antOrder, order);
-    result = fourthQuarter(positive, result, antOrder, order);
+    var hadamardMatrix = q1
+    hadamardMatrix = addQ2(q1, hadamardMatrix, antOrder, order);
+    hadamardMatrix = addQ2(q1, hadamardMatrix, antOrder, order);
+    hadamardMatrix = addQ4(q1, hadamardMatrix, antOrder, order);
 
-    memo[order] = result;
-    return result;
+    memo[order] = hadamardMatrix;
+    return hadamardMatrix;
   }
 }
 
-var x = hadamard(2);
+function addQ2(q1, hadamardMatrix, antOrder, order) {
+  for(var i = 0, a = 0; a < antOrder ; i += 1, a += 1){
+    for(var j = 0, b = antOrder; b < order; j += 1, b += 1) {
+      hadamardMatrix[a].push(q1[i][j]);
+    }
+  }
+  return hadamardMatrix;
+}
 
+function addQ2(q1, hadamardMatrix, antOrder, order) {
+  for(var i = 0, a = antOrder; a < order; i += 1, a += 1){
+    hadamardMatrix.push([]);
+    for(var j = 0, b = 0; b < antOrder; j += 1, b += 1) {
+      hadamardMatrix[a].push(q1[i][j]);
+    }
+  }
+  return hadamardMatrix;
+}
+
+function addQ4(q1, hadamardMatrix, antOrder, order) {
+  for(var i = 0, a = antOrder; a < order; i += 1, a += 1){
+    for(var j = 0, b = antOrder; b < order; j += 1, b += 1) {
+      hadamardMatrix[a].push(-1*q1[i][j]);
+    }
+  }
+  return hadamardMatrix;
+}
+
+var x = hadamard(2);
 
 console.log(x);
 module.exports = {};
