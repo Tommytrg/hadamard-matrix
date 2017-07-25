@@ -53,5 +53,6 @@ function addQ4(q1, hadamardMatrix, antOrder, order) {
 
 var x = hadamard(2);
 
-console.log(x);
-module.exports = {};
+module.exports = {
+  hadamard
+};

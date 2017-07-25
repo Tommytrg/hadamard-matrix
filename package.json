@@ -3,14 +3,28 @@
   "version": "1.0.0",
   "description": "A Hadamard matrix generator of order n using memoization",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
+  "author": {
+    "name": "tommytrg",
+    "email": "tomastrg22@gmail.com",
+    "url": "https://github.com/Tommytrg"
   },
-  "author": "tommytrg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tommytrg/sudoku-validate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tommytrg/sudoku-validate/issues"
+  },
+  "scripts": {
+
+  },
+  "keywords": [
+    "hadamard",
+    "matrix",
+    "mathematics"
+  ],
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.1.0",
-    "eslint": "^4.3.0",
-    "mocha": "^3.4.2"
+
   }
 }
