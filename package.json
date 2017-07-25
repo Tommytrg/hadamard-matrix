@@ -1,0 +1,16 @@
+{
+  "name": "hadamard-matrix",
+  "version": "1.0.0",
+  "description": "A Hadamard matrix generator of order n using memoization",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "tommytrg",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "eslint": "^4.3.0",
+    "mocha": "^3.4.2"
+  }
+}
