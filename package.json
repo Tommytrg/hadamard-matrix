@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Tommytrg/sudoku-validate.git"
+    "url": "https://github.com/Tommytrg/hadamard-matrix"
   },
   "bugs": {
-    "url": "https://github.com/Tommytrg/sudoku-validate/issues"
+    "url": "https://github.com/Tommytrg/hadamard-matrix/issues"
   },
   "scripts": {
 
