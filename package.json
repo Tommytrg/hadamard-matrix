@@ -15,9 +15,7 @@
   "bugs": {
     "url": "https://github.com/Tommytrg/hadamard-matrix/issues"
   },
-  "scripts": {
-
-  },
+  "scripts": {},
   "keywords": [
     "hadamard",
     "matrix",
@@ -25,6 +23,7 @@
   ],
   "license": "ISC",
   "devDependencies": {
-
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
   }
 }
