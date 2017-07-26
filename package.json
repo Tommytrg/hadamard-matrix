@@ -1,6 +1,6 @@
 {
   "name": "hadamard-matrix",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Hadamard matrix generator of order n using memoization",
   "main": "index.js",
   "author": {
