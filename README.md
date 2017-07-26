@@ -10,7 +10,7 @@
 
 **NOTE:** more badges availables in [shields.io](https://shields.io/) -->
 
-> A Hadamard matrix generator of order n using memoization.
+> A Hadamard matrix generator of order n using memoization. 
 
 ## Install
 
@@ -18,34 +18,53 @@
 $ npm install hadamard-matrix --save
 ```
 
-<!-- ## Usage
+ ## Usage
 
 ```js
-const hadamard = require('sudoku-validate')
+var hadamard = require('hadamard-matrix')
 
-hadamard(order)
-//=> return Hadamard matrix with order n
+hadamard(1)
+//=> return [1]
+
+hadamard(2)
+//=> return [
+//           [ 1,  1 ],  
+//           [ 1, -1 ]
+//          ]
+
+hadamard(4)
+//=> return [
+//           [ 1,  1,  1,  1 ],  
+//           [ 1, -1,  1, -1 ],
+//           [ 1,  1, -1, -1 ],  
+//           [ 1, -1, -1,  1 ],
+//          ]
 ```
+
 
 ## API
 
-### sudokuValidate(input, [options])
+### hadamard(order)
 
-#### input
-
+#### order
 *Required*<br>
-Type: `string`
+Type: `number`
 
-Lorem ipsum.
+Order of the Hadamard matrix it will return. It could´t be a odd number.
 
-#### options
+#### result
 
-##### foo
+Type: `object`<br>
 
-Type: `boolean`<br>
-Default: `false`
+Result will be a matrix with entries ± 1. 
 
-Lorem ipsum. -->
+
+
+## Information
+
+You can read information about Hadamard matrix in [https://en.wikipedia.org/wiki/Hadamard_matrix](https://en.wikipedia.org/wiki/Hadamard_matrix)
+
+
 
 ## License
 
